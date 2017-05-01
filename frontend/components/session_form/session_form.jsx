@@ -32,9 +32,17 @@ class SessionForm extends React.Component {
 
 	navLink() {
 		if (this.props.formType === "login") {
-			return <Link to="/signup">sign up instead</Link>;
+			return <Link className="auth-form-toggle" to="/signup">sign up instead</Link>;
 		} else {
-			return <Link to="/login">log in instead</Link>;
+			return <Link className="auth-form-toggle" to="/login">log in instead</Link>;
+		}
+	}
+
+	title(){
+		if (this.props.formType === "login") {
+			return <div className="login-title">Log In</div>;
+		} else {
+			return <div className="login-title">Sign Up</div>;
 		}
 	}
 
@@ -42,7 +50,7 @@ class SessionForm extends React.Component {
 		return(
 			<ul>
 				{this.props.errors.map((error, i) => (
-					<li key={`error-${i}`}>
+					<li className="auth-errors" key={`error-${i}`}>
 						{error}
 					</li>
 				))}
@@ -53,27 +61,27 @@ class SessionForm extends React.Component {
 	render() {
 		return (
 			<div className="login-form-container">
+				<h1 className="auth-header">Rate My Employer</h1>
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					<br/>
-					Please {this.props.formType} or {this.navLink()}
+					{this.title()}
 					{this.renderErrors()}
 					<div className="login-form">
-						<br/>
-						<label> Username:
 							<input type="text"
 								value={this.state.username}
 								onChange={this.update("username")}
-								className="login-input" />
-						</label>
-						<br/>
-						<label> Password:
+								className="login-input"
+								placeholder="Username"/>
 							<input type="password"
 								value={this.state.password}
 								onChange={this.update("password")}
-								className="login-input" />
-						</label>
-						<br/>
-						<input type="submit" value="Submit" />
+								className="login-input"
+								placeholder="Password"/>
+						<input className="login-submit" type="submit" value="Submit" />
+					</div>
+					<Link className="login-home" to="/home">Continue to site!</Link>
+					<div className="auth-question-toggle">
+						<div>Please {this.props.formType} or</div>
+						{this.navLink()}
 					</div>
 				</form>
 			</div>
