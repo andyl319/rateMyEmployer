@@ -5,8 +5,8 @@ import GreetingContainer from './greeting/greeting_container';
 
 const App = ({ children }) => (
   <div>
-    <h1>Rate My Employer</h1>
     <GreetingContainer />
+    <h1>Rate My Employer</h1>
     {children}
   </div>
 );

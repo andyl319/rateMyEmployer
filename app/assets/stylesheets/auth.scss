@@ -19,9 +19,16 @@
   left: 15px;
 }
 
+.auth-err-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+}
+
 .auth-errors{
   display: flex;
-  color: white;
+  color: red;
 }
 
 .login-form-box{
