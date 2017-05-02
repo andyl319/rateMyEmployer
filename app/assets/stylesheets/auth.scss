@@ -12,16 +12,50 @@
 
 .auth-header{
   display: flex;
-  color: #33D7D1;
+  color: #2C8437;
   position: relative;
   letter-spacing: 4px;
   font-size: 56px;
   left: 15px;
+  text-shadow:
+        /* first layer at 1px */
+        -1px -1px 0px white,
+         0px -1px 0px white,
+         1px -1px 0px white,
+        -1px  0px 0px white,
+         1px  0px 0px white,
+        -1px  1px 0px white,
+         0px  1px 0px white,
+         1px  1px 0px white,
+        /* second layer at 2px */
+        -2px -2px 0px white,
+        -1px -2px 0px white,
+         0px -2px 0px white,
+         1px -2px 0px white,
+         2px -2px 0px white,
+         2px -1px 0px white,
+         2px  0px 0px white,
+         2px  1px 0px white,
+         2px  2px 0px white,
+         1px  2px 0px white,
+         0px  2px 0px white,
+        -1px  2px 0px white,
+        -2px  2px 0px white,
+        -2px  1px 0px white,
+        -2px  0px 0px white,
+        -2px -1px 0px white;
+}
+
+.auth-err-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
 }
 
 .auth-errors{
   display: flex;
-  color: white;
+  color: red;
 }
 
 .login-form-box{
@@ -106,6 +140,6 @@
 .login-submit:hover, .login-home:hover,
 .auth-form-toggle:hover{
   cursor: pointer;
-  border-color: #33D7D1;
-  color: #33D7D1;
+  border-color: #2C8437;
+  color: #2C8437;
 }

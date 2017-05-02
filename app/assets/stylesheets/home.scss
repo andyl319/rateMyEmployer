@@ -1,0 +1,81 @@
+.header-group, .login-signup{
+  display: flex;
+  width: 100%;
+  height: 75px;
+  justify-content: flex-end;
+  background-color: transparent;
+}
+
+.header-button{
+  display: flex;
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin-left: 15px;
+  margin-right: 30px;
+  font-size: 15px;
+  line-height: 75px;
+  text-decoration: none;
+}
+
+.header-button:hover{
+  cursor: pointer;
+  border-bottom: solid white;
+  border-width: medium;
+}
+
+.splash{
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("http://res.cloudinary.com/dfkydaeys/image/upload/v1493693039/rsz_kitchen_abahaz.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  padding-top: 30px;
+  letter-spacing: 1px;
+
+}
+
+.header-name{
+  display: flex;
+  line-height: 55px;
+  padding-right: 15px;
+  font-size: 15px;
+}
+
+.home-title{
+  display: flex;
+  justify-content: center;
+  color: #2C8437;
+  font-size: 56px;
+  letter-spacing: 4px;
+  text-shadow:
+        /* first layer at 1px */
+        -1px -1px 0px white,
+         0px -1px 0px white,
+         1px -1px 0px white,
+        -1px  0px 0px white,
+         1px  0px 0px white,
+        -1px  1px 0px white,
+         0px  1px 0px white,
+         1px  1px 0px white,
+        /* second layer at 2px */
+        -2px -2px 0px white,
+        -1px -2px 0px white,
+         0px -2px 0px white,
+         1px -2px 0px white,
+         2px -2px 0px white,
+         2px -1px 0px white,
+         2px  0px 0px white,
+         2px  1px 0px white,
+         2px  2px 0px white,
+         1px  2px 0px white,
+         0px  2px 0px white,
+        -1px  2px 0px white,
+        -2px  2px 0px white,
+        -2px  1px 0px white,
+        -2px  0px 0px white,
+        -2px -1px 0px white;
+}

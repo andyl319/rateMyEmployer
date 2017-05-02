@@ -32,9 +32,17 @@ class SessionForm extends React.Component {
 
 	navLink() {
 		if (this.props.formType === "login") {
-			return <Link className="auth-form-toggle" to="/signup">sign up instead</Link>;
+			return <Link onClick={this.clearErrors} className="auth-form-toggle" to="/signup">sign up instead</Link>;
 		} else {
-			return <Link className="auth-form-toggle" to="/login">log in instead</Link>;
+			return <Link onClick={this.clearErrors} className="auth-form-toggle" to="/login">log in instead</Link>;
+		}
+	}
+
+	clearErrors(){
+		let errors = document.getElementsByClassName("auth-errors");
+		if(errors){
+				errors[0].innerHTML = "";
+				errors[1].innerHTML = "";
 		}
 	}
 
@@ -48,7 +56,7 @@ class SessionForm extends React.Component {
 
 	renderErrors() {
 		return(
-			<ul>
+			<ul className="auth-err-container">
 				{this.props.errors.map((error, i) => (
 					<li className="auth-errors" key={`error-${i}`}>
 						{error}
